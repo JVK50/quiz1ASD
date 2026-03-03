@@ -9,23 +9,25 @@ public class mataKuliah_13 {
         this.namaMK = namaMK;
         this.sks = sks;
     }
-
-    
-    public void ubahNamaMK(String namaMKBaru) {
-        this.namaMK = namaMKBaru;
-    }
-    
-    public void ubahSKS(int sks) {
-        if (sks >= 2) {
-            this.sks = sks;
-        } else {
-            System.out.println("SKS tidak boleh kurang dari 2.");
-        }
-    }
     
     public void tampilkanInfo() {
         System.out.println("Kode Mata Kuliah: " + kodeMK);
         System.out.println("Nama Mata Kuliah: " + namaMK);
         System.out.println("SKS: " + sks);
     }
+    
+    public String ubahNamaMK(String namaMKBaru) {
+        this.namaMK = namaMKBaru;
+        return "Nama mata kuliah berhasil diubah menjadi: " + namaMKBaru;
+    }
+    
+    public int ubahSKS(int sks) {
+        if (sks >= 2) {
+            this.sks = sks;
+        } else {
+            System.out.println("SKS tidak boleh kurang dari 2.");
+        }
+        return sks;
+    }
+    
 }
