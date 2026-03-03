@@ -1,5 +1,4 @@
 package smt2.quizPart1;
-
 public class mataKuliah_13 {
     String kodeMK;
     String namaMK;
@@ -11,18 +10,22 @@ public class mataKuliah_13 {
         this.sks = sks;
     }
 
+    
+    public void ubahNamaMK(String namaMKBaru) {
+        this.namaMK = namaMKBaru;
+    }
+    
+    public void ubahSKS(int sks) {
+        if (sks >= 2) {
+            this.sks = sks;
+        } else {
+            System.out.println("SKS tidak boleh kurang dari 2.");
+        }
+    }
+    
     public void tampilkanInfo() {
         System.out.println("Kode Mata Kuliah: " + kodeMK);
         System.out.println("Nama Mata Kuliah: " + namaMK);
         System.out.println("SKS: " + sks);
     }
-
-    public void ubahNamaMK(String namaMK) {
-        this.namaMK = namaMK;
-    }
-
-    public void ubahSKS(int sks) {
-        this.sks = sks;
-    }
-
 }
